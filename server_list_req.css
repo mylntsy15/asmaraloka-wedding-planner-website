@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('image/bgimg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    display: flex;
+    text-align: left;
+}
+
+.container-center {
+    flex-grow: 1;
+    padding: 20px;
+    transition: margin-left 0.4s ease, width 0.4s ease;
+    margin-left: 75px;
+    width: calc(100% - 75px);
+}
+
+
+.sidebar:hover ~ .container-center {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+}
+
+
+.title {
+    font-size: 30px;
+    padding: 30px;
+    padding-bottom: 10px;
+}
+
+.table_header {
+    width: 100%;
+    height: 10%;
+    background-color: #fff4;
+    padding: .8rem 1rem
+}
+
+.table_body {
+    width: 95%;
+    max-height: calc(89% - .8rem);
+    background-color: #fff4;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.table_body::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table_body::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: black;
+    visibility: hidden;
+}
+
+.table_body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #EED1D5;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #E6A4B4;
+}
+
+.status {
+    padding: .4rem 0;
+    border-radius: 2rem;
+    width: 90px;
+    text-align: center;
+}
+
+.status.approved {
+    background-color: rgb(80, 231, 80);
+    color: black;
+}
+
+.status.pending {
+    background-color: rgb(237, 237, 146);
+    color: black;
+}
+
+.status.reject {
+    background-color: red;
+    color: black;
+}
+
+
+.icon-chat {
+    color: grey;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.icon-chat:hover {
+    color: #E6A4B4;
+}

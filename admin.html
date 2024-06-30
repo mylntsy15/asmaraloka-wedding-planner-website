@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bag - ASMARALOKA</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="navbar.css" />
+    <link rel="stylesheet" href="sidebar.css">
+    <script type="module" src="registeradmin.js" defer></script>
+    <script type="module" src="loginadmin.js" defer></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            min-height: 100vh;
+            background-image: url('image/bgimg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            display: flex;
+            text-align: left;
+        }
+
+        .container-center {
+            flex-grow: 1;
+            padding: 20px;
+            transition: margin-left 0.4s ease, width 0.4s ease;
+            margin-left: 75px;
+            width: calc(100% - 75px);
+        }
+
+
+        .sidebar:hover~.container-center {
+            margin-left: 260px;
+            width: calc(100% - 260px);
+        }
+
+
+        .title {
+            font-size: 30px;
+            padding: 30px;
+            padding-bottom: 10px;
+        }
+
+        .table_header {
+            width: 100%;
+            height: 10%;
+            background-color: #fff4;
+            padding: .8rem 1rem
+        }
+
+        .table_body {
+            width: 95%;
+            max-height: calc(89% - .8rem);
+            background-color: #fff4;
+            margin: .8rem auto;
+            border-radius: .6rem;
+            overflow: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .table_body::-webkit-scrollbar {
+            width: 0.5rem;
+            height: 0.5rem;
+        }
+
+        .table_body::-webkit-scrollbar-thumb {
+            border-radius: .5rem;
+            background-color: black;
+            visibility: hidden;
+        }
+
+        .table_body:hover::-webkit-scrollbar-thumb {
+            visibility: visible;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            background-color: #EED1D5;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #E6A4B4;
+        }
+
+        .status {
+            padding: .4rem 0;
+            border-radius: 2rem;
+            width: 90px;
+            text-align: center;
+        }
+
+        .status.approved {
+            background-color: rgb(80, 231, 80);
+            color: black;
+        }
+
+        .status.pending {
+            background-color: rgb(237, 237, 146);
+            color: black;
+        }
+
+        .status.reject {
+            background-color: red;
+            color: black;
+        }
+
+
+        .icon-chat {
+            color: grey;
+            cursor: pointer;
+            padding-left: 20px;
+        }
+
+        .icon-chat:hover {
+            color: #E6A4B4;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shCzFq6PNUAPOe9xgt7pUyo9gyiJK6yj6y0pX"
+        crossorigin="anonymous"></script>
+    <section>
+        <div class="trailer" id="trailer"></div>
+    </section>
+
+    <aiside class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/sidebar-logo.png" alt="LOGO">
+            <h2>ASMARALOKA</h2>
+        </div>
+        <ul class="sidebar-links">
+            <h4>
+                <span>Main Menu</span>
+                <div class="menu-separator"></div>
+            </h4>
+            <li>
+                <a href="server_list_req2.php"><span class="material-symbols-outlined">Dashboard</span>Dashboard</a>
+            </li>
+            <li>
+                <a href="admin-product.php"><span class="material-symbols-outlined">list_alt</span>Products</a>
+            </li>
+            <li>
+                <a href="chatbox-seller.html"><span class="material-symbols-outlined">Headset_Mic</span>Customer Chat</a>
+            </li>
+
+            <h4>
+                <span>Account</span>
+                <div class="menu-separator"></div>
+            </h4>
+            <li>
+                <a href="#"><span class="material-symbols-outlined">account_circle</span>Profile</a>
+            </li>
+            <li>
+                <a href="settingadmin.html"><span class="material-symbols-outlined">settings</span>Settings</a>
+            </li>
+            <li>
+                <a href="#" id="logout-button"><span class="material-symbols-outlined">logout</span>Logout</a>
+            </li>
+        </ul>
+
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="images/admin-profile.jpg" alt="admin profile">
+                <div class="user-detail">
+                    <h3>Shaf Jeffery</h3>
+                    <span>Asmaraloka Admin</span>
+                </div>
+            </div>
+        </div>
+    </aiside>
+
+    <div class="container-center">
+        <h1 class="title">Admin Content</h1>
+    </div>
+
+    <script src="homepage.js"></script>
+    <script src="cursortrail.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDb6Z_pskUUnt3QDGiEJ6cs416aijWLd0w",
+            authDomain: "asmaraloka-admin.firebaseapp.com",
+            projectId: "asmaraloka-admin",
+            storageBucket: "asmaraloka-admin.appspot.com",
+            messagingSenderId: "979622171057",
+            appId: "1:979622171057:web:9e011fb238a92e13a3ad90"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        console.log("Firebase has been initialized successfully.");
+
+        document.getElementById('logout-button').addEventListener('click', function () {
+            auth.signOut().then(() => {
+                alert('You have been logged out.');
+                window.location.href = 'admin_home.html';
+            }).catch((error) => {
+                alert('Error logging out: ' + error.message);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.breadcrumb {
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #bdbdbd;
+    background-color: transparent;
+    padding-left: 30px;
+  }
+
+  .breadcrumb a {
+    color: #bdbdbd;
+  }
+
+  .breadcrumb a:hover,
+  .breadcrumb a:focus,
+  .breadcrumb a:active,
+  .breadcrumb a:visited {
+    color: #bdbdbd;
+  }

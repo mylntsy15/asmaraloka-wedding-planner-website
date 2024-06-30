@@ -1,0 +1,316 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url("image/bgimg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+   
+  }
+
+  @media print {
+  #printSection * {
+      visibility: visible;
+      display: flex;
+    }
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: "Cormorant Garamond", serif;
+  }
+  
+  .custom-container {
+    padding: 100px 0 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: linear-gradient(
+        rgba(241, 219, 219, 0.5),
+        rgba(237, 225, 225, 0.5)
+      ),
+      url("image/pemandangancantik.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top top;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  
+  .custom-container2 {
+    padding: 10px 0 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top top;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  
+  h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: normal;
+    font-size: 60px;
+    margin: -150px 0 40px;
+  }
+  
+  .countdown {
+    display: flex;
+    transform: scale(2);
+  }
+  
+  .time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+  }
+  
+  .time small {
+    font-family: "Cormorant Garamond", serif;
+  }
+  
+  .time h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1;
+    margin: 0 0 5px;
+    padding-top: 8px;
+    font-family: "League Spartan", serif;
+  }
+  
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 45px;
+    }
+  
+    .time {
+      margin: 5px;
+    }
+  
+    .time h2 {
+      font-size: 12px;
+    }
+  
+    .time small {
+      font-size: 10px;
+    }
+  }
+  
+  .print-button {
+    background-color: #e6a4b4;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: normal;
+    display: inline-block;
+    font-size: 18px;
+    margin: 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 200px;
+  }
+
+  .add-button {
+    background-color: #e6a4b4;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+    margin: 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .edit-button {
+    margin: 50px;
+    background-color: transparent;
+    color: gray;
+    border: 2px solid grey;
+    padding: 1px 5px;
+  }
+  
+  .form-control {
+    border-radius: 5px 5px 5px 5px !important;
+    margin-right: 10px;
+  }
+
+  .icon-placeholder {
+    display: flex;
+    vertical-align: auto;
+    align-items: center;
+  }
+
+  .add-section input,
+  .add-section select,
+  .add-group-section input {
+    display: flex;
+    width: auto;
+    border: 2px solid #ccc;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 10px;
+    text-transform: capitalize;
+  }
+  
+  .add-section button,
+  .add-group-section button {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: #eed1d5;
+    color: #000000e0;
+    font-family: sans-serif;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    font-family: "Cormorant Garamond", serif;
+  }
+  
+  .add-section button:hover,
+  .add-group-section button:hover {
+    background: #eed1d5;
+    box-shadow: 0 2px 2px 0 #ccc, 0 2px 3px 0 #ccc;
+    opacity: 0.7;
+  }
+  
+  #errorMes {
+    display: block;
+    background: #f2dede;
+    color: rgb(139, 19, 19);
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .show-todo-section {
+    margin: 20px 0;
+    display: inline;
+  }
+  
+  .todo-item {
+    text-align: left;
+    background: #f2dede;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .remove-to-do {
+    float: right;
+    color: #be7b84;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .remove-to-do:hover {
+    color: #ff0000;
+  }
+  
+  .checked {
+    color: #999 !important;
+    text-decoration: line-through;
+  }
+
+  .todo-item input {
+    margin-right: 10px;
+  }
+  
+  .empty {
+    text-align: center;
+    color: #c1727d;
+    font-size: 16px;
+  }
+
+  .group-item {
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    background-color: #be7b84;
+  }
+  
+  .card-body {
+    flex-direction: column;
+    height: auto
+  }
+
+  .group-item.card {
+    display: flex;
+    background-color: #00000000;
+    border-width: 1px;
+    border-color: #be7b84a2;
+    font-size: 18px;
+  }
+
+ 
+  .group-item .card-title {
+    margin-bottom: 20px;
+    text-align: start;
+    font-size: 20px;
+  }
+  
+  .swipe-delete {
+    transition: transform 0.3s ease;
+  }
+  
+
+  .search-form {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 200px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.search-form input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #e6a4b4;
+    border-radius: 18px;
+}
+
+.search-form button {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    background-color: #e6a4b4;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#search-results {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}

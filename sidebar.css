@@ -1,0 +1,132 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: rgb(22, 21, 21);
+    padding: 25px 20px;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.sidebar:hover {
+    width: 260px;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-header img {
+    width: 45px;
+    border-radius: 50%;
+}
+
+.sidebar-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+.sidebar-links {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar-links h4 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0;
+    margin-left: 10px;
+    white-space: nowrap;
+    position: relative; 
+}
+
+.sidebar-links h4 span {
+    opacity: 0;
+}
+
+.sidebar:hover .sidebar-links h4 span {
+    opacity: 1;
+}
+
+.sidebar-links .menu-separator {
+    position: absolute;
+    left: 0;
+    right: 0; 
+    top: 20px; 
+    transform: translateY(-50%); 
+    height: 1px;
+    background-color: #ffffff;
+    transform-origin: center;
+    transition-duration: 0.2s;
+}
+
+.sidebar:hover .sidebar-links .menu-separator {
+    transition-delay: 0s;
+    transform: scaleX(0);  
+}
+
+.sidebar-links li a {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    color: #e6a4b4;
+    font-weight: 500;
+    padding: 15px 10px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sidebar-links li a:hover {
+    background: #e6a4b4;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.user-account {
+    margin-top: auto;
+    padding: 12px 10px;
+    margin-left: -10px;
+}
+
+.user-account .user-profile {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.user-profile img {
+    width: 42px;
+    border-radius: 50%;
+}
+
+.user-detail {
+    margin-left: 23px;
+    white-space: nowrap;
+}
+
+.user-profile h3 {
+    font-size: 1rem;
+    font-weight: 650;
+}
+
+.user-profile span {
+    font-size: 0.775rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.sidebar:hover .user-account {
+    background: #e6a4b4;
+    border-radius: 4px;
+}
